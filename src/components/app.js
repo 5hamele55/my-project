@@ -1,6 +1,8 @@
 import { Router } from 'preact-router';
 import { useState } from 'preact/hooks';
 import Header from './header';
+import StrickyHeader from './stricky-header';
+import PhoneMenu from './phone-menu';
 
 // Code-splitting is automated for `routes` directory
 import Home from '../routes/home';
@@ -21,9 +23,12 @@ const App = () => {
 		{ href: "#", body: "3" },
 		{ href: "#", body: "4" }
 	])
+	const [menuBtn, setMenuBtn] = useState(false)
 	return (
 		<div id="app">
 			<Header headerLink={headerLink} headerSocialLink={headerSocialLink} />
+			<StrickyHeader headerLink={headerLink} headerSocialLink={headerSocialLink} />
+			<PhoneMenu />
 			<Router>
 				<Home path="/" />
 			</Router>

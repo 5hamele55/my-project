@@ -1,0 +1,22 @@
+.strickyHeader {
+  padding: 0 60px;
+  background-color: #0f0d1d;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 4;
+  transition: all 500ms ease;
+  box-shadow: 0px 10px 60px 0px rgb(0 0 0 / 5%);
+  visibility: hidden;
+  transform: translateY(-120%);
+}
+.strickyFixed {
+  transform: translateY(0);
+  visibility: visible;
+}
+@media (max-width: 1199px) {
+  .strickyHeader {
+    display: none;
+  }
+}

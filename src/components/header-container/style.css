@@ -1,0 +1,231 @@
+.headerWrapper {
+  display: flex;
+  align-items: center;
+}
+.headerWrapperLeft {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  float: left;
+  padding: 40.5px 60px;
+  padding-left: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+.logo img {
+  vertical-align: middle;
+}
+nav {
+  display: flex;
+  padding-left: 60px;
+}
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  align-items: center;
+}
+nav ul li {
+  padding-top: 40.5px;
+  padding-bottom: 40.5px;
+  margin-left: 64px;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 500ms ease;
+  letter-spacing: 0.1em;
+}
+nav ul li:first-child {
+  margin: 0;
+}
+nav ul li a::before {
+  content: "";
+  width: 10px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  transition: transform 500ms ease;
+  transform: scale(0, 1);
+  transform-origin: right center;
+}
+nav ul li a:hover::before {
+  transform: scale(1, 1);
+  transform-origin: left center;
+}
+.header nav a.active::before {
+  transform: scale(1, 1);
+  transform-origin: left center;
+}
+.hamburger {
+  transition: 500ms;
+  margin-right: 0;
+  padding: 40.5px 0;
+  cursor: pointer;
+  display: none;
+}
+.hamburger:hover > .hamburgerLine {
+  transform: scale(1);
+}
+.hamburgerLine {
+  width: 30px;
+  height: 2px;
+  transform: scale(1);
+  transform-origin: right center;
+  transition: transform 500ms ease;
+  background-color: white;
+}
+.hamburgerLine1 {
+  transform: scaleX(0.55);
+  margin-bottom: 4px;
+}
+.hamburgerLine2 {
+  transform: scaleX(0.75);
+  margin-bottom: 4px;
+}
+.headerWrapperRight {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.social {
+  display: block;
+  float: left;
+}
+.socialBox {
+  display: flex;
+  align-items: center;
+  padding: 19px 0;
+}
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  transition: all 500ms ease;
+  font-weight: 400;
+  text-decoration: none;
+  margin-left: 25px;
+}
+.socialLink:first-child {
+  margin-left: 0;
+}
+.socialLink:hover {
+  color: #3c72fc;
+}
+.searchBox {
+  display: block;
+  float: left;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.search {
+  font-size: 24px;
+  color: white;
+  padding: 45.5px 60px 45.5px;
+  display: inline-block;
+  transition: all 500ms ease;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+}
+.phone {
+  display: block;
+  float: left;
+}
+.phone p {
+  font-size: 16px;
+  color: white;
+  margin: 0;
+  line-height: 20px;
+  opacity: 0.7;
+}
+.phone a {
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  transition: all 500ms ease;
+  text-decoration: none;
+}
+.phone a:hover {
+  color: #3c72fc;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1650px) {
+  .searchBox {
+    margin-left: 0;
+  }
+  .search {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .social {
+    display: none;
+  }
+}
+@media (max-width: 1400px) {
+  .searchBox {
+    margin-right: 0;
+  }
+  .phone {
+    display: none;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .search {
+    padding: 15.5px 30px 15.5px;
+  }
+}
+@media (max-width: 1199px) {
+  .logo {
+    padding-right: 30px;
+  }
+  nav {
+    padding-left: 30px;
+  }
+  nav ul {
+    display: none;
+  }
+  .hamburger {
+    display: inline-block;
+  }
+  .search {
+    border-right: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .headerWrapperRight {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .headerWrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .logo {
+    border-right: none;
+  }
+  nav {
+    float: none;
+    margin-left: auto;
+  }
+  .headerWrapperLeft {
+    width: 100%;
+  }
+}
