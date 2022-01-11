@@ -1,13 +1,13 @@
 import { Link } from 'preact-router/match';
 import style from './style.css';
-import logo from '../../assets/img/logo-1.png'
-const headerWrapper = ({ headerLink, headerSocialLink }) => (
+import Logo from '../../logo'
+const headerWrapper = ({ headerLink, headerSocialLink, openMenu, phone }) => (
   <header class={style.header}>
     <div class={style.headerWrapper}>
       <div class={style.headerWrapperLeft}>
-        <div class={style.logo}><Link href="/"><img src={logo} /></Link></div>
+        <div class={style.logo}><Logo /></div>
         <nav>
-          <div class={style.hamburger}>
+          <div class={style.hamburger} onClick={openMenu}>
             <div class={`${style.hamburgerLine} ${style.hamburgerLine1}`}></div>
             <div class={`${style.hamburgerLine} ${style.hamburgerLine2}`}></div>
             <div class={`${style.hamburgerLine} ${style.hamburgerLine3}`}></div>
@@ -25,16 +25,16 @@ const headerWrapper = ({ headerLink, headerSocialLink }) => (
         <div class={style.social}>
           <div class={style.socialBox}>
             {headerSocialLink.map(link => (
-              <a key={link.body} href={link.href} class={style.socialLink}>{link.body}</a>
+              <Link key={link.body} href={link.href} class={style.socialLink}>{link.body}</Link>
             ))}
           </div>
         </div>
         <div class={style.searchBox}>
-          <a href='#' class={style.search}>&#x1F50D;</a>
+          <Link href='#' class={style.search}>&#x1F50D;</Link>
         </div>
         <div class={style.phone}>
           <p>Need help? Talk to an expert</p>
-          <a href="tel:+92-666-888-0000">+92 666 888 0000</a></div>
+          <a href={`tel:${phone.trim()}`}>{phone}</a></div>
       </div>
     </div>
   </header>

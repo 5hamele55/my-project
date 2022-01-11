@@ -1,8 +1,8 @@
 import style from './style.css';
-import HeaderWrapper from '../header-container';
+import HeaderWrapper from '../header-wrapper';
 import { useState, useEffect } from 'preact/hooks';
 
-const StrickyHeader = ({ headerLink, headerSocialLink }) => {
+const StrickyHeader = ({ headerLink, headerSocialLink, phone }) => {
   const [scroll, setScroll] = useState(0)
   const [visible, setVisible] = useState(false)
   const handleScroll = () => {
@@ -14,7 +14,7 @@ const StrickyHeader = ({ headerLink, headerSocialLink }) => {
   })
   return (
     <div id="headerVisible" class={`${style.strickyHeader} ${visible && style.strickyFixed}`}>
-      <HeaderWrapper headerLink={headerLink} headerSocialLink={headerSocialLink} />
+      <HeaderWrapper headerLink={headerLink} headerSocialLink={headerSocialLink} phone={phone} />
     </div>
   );
 }

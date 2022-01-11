@@ -1,0 +1,157 @@
+.phoneMenuWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transform: translateX(-50%);
+  transform-origin: right center;
+  transition: transform 500ms ease-in, opacity 500ms linear,
+    visibility 500ms ease-in;
+  z-index: 5;
+  visibility: hidden;
+  background-color: white;
+}
+.phoneMenuOpen {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+.phoneMenuOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.phoneMenuContent {
+  width: 300px;
+  background-color: #0f0d1d;
+  z-index: 6;
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.menuCloseBtn {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 900;
+}
+.phoneMenuLogo {
+  margin-bottom: 40px;
+  display: flex;
+}
+.phoneMenuLogo a img {
+  width: 155px;
+}
+.navContainer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.navContainer ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.navContainer li:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.navContainer ul li a {
+  display: flex;
+  justify-content: space-between;
+  line-height: 30px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  height: 46px;
+  align-items: center;
+  transition: 500ms;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.navContainer ul li a button {
+  width: 30px;
+  height: 30px;
+  background-color: #3c72fc;
+  border: none;
+  outline: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotate(0);
+  transition: transform 500ms ease;
+  cursor: pointer;
+}
+.navContainer ul li a button.expanded {
+  transform: rotate(90deg);
+  background-color: white;
+  color: black;
+}
+.phoneMenuContact {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 0;
+  list-style: none;
+}
+.phoneMenuContact li {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.phoneMenuContact li span {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #3c72fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 11px;
+  margin-right: 10px;
+  color: white;
+}
+.phoneMenuContact li a {
+  color: white;
+  transition: 500ms;
+  text-decoration: none;
+}
+.phoneMenuContact li a:hover {
+  color: #3c72fc;
+}
+.phoneMenuSocial {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.phoneMenuSocialBox {
+  display: flex;
+  align-items: center;
+}
+.phoneMenuSocialLink {
+  font-size: 16px;
+  color: #3c72fc;
+  transition: 500ms;
+  font-weight: 400;
+  text-decoration: none;
+}
+.phoneMenuSocialLink:hover {
+  color: white;
+}
