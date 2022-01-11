@@ -136,14 +136,12 @@
   color: #3c72fc;
 }
 .phoneMenuSocial {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-bottom: 30px;
+  width: 146px;
 }
 .phoneMenuSocialBox {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
 .phoneMenuSocialLink {
   font-size: 16px;
