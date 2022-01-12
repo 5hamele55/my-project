@@ -1,9 +1,10 @@
 import style from './style.css';
-
-const Home = () => (
+import MainSlider from '../../components/home-components/main-slider';
+import RealWorld from '../../components/home-components/real-world';
+const Home = ({ scroll }) => (
 	<div class={style.home}>
-		<h1>Home</h1>
-		<p>This is the Home component.</p>
+		<MainSlider />
+		<RealWorld scroll={scroll} />
 	</div>
 );
 

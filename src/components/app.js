@@ -1,5 +1,5 @@
 import { Router } from 'preact-router';
-import { useState } from 'preact/hooks';
+import { useState, useEffect } from 'preact/hooks';
 import Header from './header-components/header';
 import StrickyHeader from './header-components/stricky-header';
 import PhoneMenu from './header-components/phone-menu';
@@ -26,6 +26,13 @@ const App = () => {
 	const [phone, setPhone] = useState('+92 666 888 0000')
 	const [mail, setMail] = useState('needhelp@aivons.com')
 	const [menuBtn, setMenuBtn] = useState(false)
+	const [scroll, setScroll] = useState(null)
+	const handleScroll = () => {
+		setScroll(window.scrollY)
+	}
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll, { once: true })
+	})
 	const openMenu = () => {
 		setMenuBtn(true)
 		console.log(menuBtn)
@@ -49,7 +56,7 @@ const App = () => {
 			<StrickyHeader headerLink={headerLink} headerSocialLink={headerSocialLink} phone={phone} />
 			<PhoneMenu menuBtn={menuBtn} closeMenu={closeMenu} phone={phone} headerLink={headerLink} expandLink={expandLink} headerSocialLink={headerSocialLink} mail={mail} phone={phone} />
 			<Router>
-				<Home path="/" />
+				<Home path="/" scroll={scroll} />
 			</Router>
 		</div>
 	)
