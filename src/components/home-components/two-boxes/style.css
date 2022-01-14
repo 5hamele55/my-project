@@ -1,0 +1,120 @@
+.twoBoxes {
+  position: relative;
+  display: block;
+  z-index: 2;
+}
+.twoBoxesContainer {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+.twoBoxesRow {
+  width: 100%;
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.twoBoxesRow > * {
+  flex-shrink: 0;
+  max-width: 100%;
+}
+.twoBoxesSingle {
+  position: relative;
+  display: block;
+  background-color: white;
+  box-shadow: 0px 10px 60px 0px rgb(0 0 0 / 10%);
+  padding: 60px 60px 52px;
+}
+.twoBoxesSingle:hover .twoBoxesCount {
+  background-color: #3c72fc;
+}
+.twoBoxesSingle:hover .twoBoxesCount span {
+  color: #ebf1ff;
+}
+.twoBoxesSingleContent {
+  position: relative;
+  display: block;
+  padding-left: 68px;
+}
+.twoBoxesCount {
+  height: 68px;
+  width: 68px;
+  background-color: #ebf1ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 6px;
+  left: 0;
+  transition: all 500ms ease;
+  color: #3c72fc;
+}
+.twoBoxesCount span {
+  font-size: 24px;
+  color: currentColor;
+  font-weight: 600;
+}
+.twoBoxesContent {
+  margin-left: 30px;
+}
+.twoBoxesTitle {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 30px;
+  margin-bottom: 11px;
+  margin-top: -6px;
+  letter-spacing: -0.02em;
+  color: #0f0d1d;
+  margin: 0;
+}
+.twoBoxesText {
+  font-size: 16px;
+  margin: 0;
+}
+@media only screen and (max-width: 767px) {
+  .twoBoxesSingle {
+    padding: 50px 30px 42px;
+  }
+  .twoBoxesSingleContent {
+    padding-left: 0;
+  }
+  .twoBoxesCount {
+    position: relative;
+    top: 0;
+  }
+  .twoBoxesContent {
+    margin-left: 0;
+    padding-top: 25px;
+  }
+}
+@media (min-width: 576px) {
+  .twoBoxesContainer {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .twoBoxesContainer {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .twoBoxesContainer {
+    max-width: 960px;
+  }
+  .twoBoxesCol {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .twoBoxesSingle {
+    padding: 60px 39px 52px;
+  }
+}
+@media (min-width: 1200px) {
+  .twoBoxesContainer {
+    max-width: 1200px;
+  }
+}

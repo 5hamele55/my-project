@@ -22,7 +22,7 @@ const PhoneMenu = ({ menuBtn, closeMenu, headerLink, expandLink, headerSocialLin
           </ul>
         </div>
         <ul class={style.phoneMenuContact}><li><span>&#9993;</span><a href={`mailto:${mail}`}>{mail}</a></li></ul>
-        <ul class={style.phoneMenuContact}><li><span>&#128222;</span><a href={`mailto:${phone.trim()}`}>{phone}</a></li></ul>
+        <ul class={style.phoneMenuContact}><li><span>&#128222;</span><a href={`tel:${phone.trim()}`}>{phone}</a></li></ul>
         <div class={style.phoneMenuSocial}>
           <div class={style.phoneMenuSocialBox}>
             {headerSocialLink.map(link => (
