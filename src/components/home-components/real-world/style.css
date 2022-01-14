@@ -61,8 +61,23 @@
   margin-left: 15px;
 }
 .realWorldCol {
-  visibility: visible;
   width: 100%;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 1500ms;
+}
+.realWorldCol:nth-child(1) {
+  transition-delay: 0ms;
+}
+.realWorldCol:nth-child(2) {
+  transition-delay: 300ms;
+}
+.realWorldCol:nth-child(3) {
+  transition-delay: 600ms;
+}
+.fadeIn {
+  transform: translateY(0);
+  opacity: 1;
 }
 .realWorldColInner {
   position: relative;

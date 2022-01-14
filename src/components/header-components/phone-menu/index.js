@@ -1,7 +1,8 @@
 import { Link } from 'preact-router/match';
 import style from './style.css';
 import Logo from '../../logo'
-const PhoneMenu = ({ menuBtn, closeMenu, headerLink, expandLink, headerSocialLink, mail, phone }) => {
+import { phone, mail } from '../../../vars'
+const PhoneMenu = ({ menuBtn, closeMenu, headerLink, expandLink, headerSocialLink }) => {
   const handleClick = (id) => expandLink(id)
   return (
     <div class={`${style.phoneMenuWrapper} ${menuBtn && style.phoneMenuOpen}`}>

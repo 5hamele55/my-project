@@ -9,13 +9,13 @@ import Home from '../routes/home';
 
 const App = () => {
 	const [headerLink, setHeaderLink] = useState([
-		{ href: "/", body: "home", expanded: false },
-		{ href: "#", body: "services", expanded: false },
-		{ href: "#", body: "pages", expanded: false },
-		{ href: "#", body: "cases", expanded: false },
-		{ href: "#", body: "shop", expanded: false },
-		{ href: "#", body: "blog", expanded: false },
-		{ href: "#", body: "contact", expanded: false }
+		{ href: "/", body: "home" },
+		{ href: "#", body: "services" },
+		{ href: "#", body: "pages" },
+		{ href: "#", body: "cases" },
+		{ href: "#", body: "shop" },
+		{ href: "#", body: "blog" },
+		{ href: "#", body: "contact" }
 	])
 	const [headerSocialLink, setHeaderSocialLink] = useState([
 		{ href: "#", body: "1" },
@@ -23,23 +23,20 @@ const App = () => {
 		{ href: "#", body: "3" },
 		{ href: "#", body: "4" }
 	])
-	const [phone, setPhone] = useState('+92 666 888 0000')
-	const [mail, setMail] = useState('needhelp@aivons.com')
 	const [menuBtn, setMenuBtn] = useState(false)
 	const [scroll, setScroll] = useState(null)
 	const handleScroll = () => {
 		setScroll(window.scrollY)
 	}
 	useEffect(() => {
-		window.addEventListener('scroll', handleScroll, { once: true })
-	})
+		window.addEventListener('scroll', handleScroll)
+		return window.addEventListener('scroll', handleScroll)
+	}, [])
 	const openMenu = () => {
 		setMenuBtn(true)
-		console.log(menuBtn)
 	}
 	const closeMenu = () => {
 		setMenuBtn(false)
-		console.log(menuBtn)
 	}
 	const expandLink = (id) => {
 		const arr = headerLink.map(link => {
@@ -52,9 +49,9 @@ const App = () => {
 	}
 	return (
 		<div id="app">
-			<Header headerLink={headerLink} headerSocialLink={headerSocialLink} openMenu={openMenu} phone={phone} />
-			<StrickyHeader headerLink={headerLink} headerSocialLink={headerSocialLink} phone={phone} />
-			<PhoneMenu menuBtn={menuBtn} closeMenu={closeMenu} phone={phone} headerLink={headerLink} expandLink={expandLink} headerSocialLink={headerSocialLink} mail={mail} phone={phone} />
+			<Header headerLink={headerLink} headerSocialLink={headerSocialLink} openMenu={openMenu} />
+			<StrickyHeader headerLink={headerLink} headerSocialLink={headerSocialLink} />
+			<PhoneMenu menuBtn={menuBtn} closeMenu={closeMenu} headerLink={headerLink} expandLink={expandLink} headerSocialLink={headerSocialLink} />
 			<Router>
 				<Home path="/" scroll={scroll} />
 			</Router>

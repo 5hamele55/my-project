@@ -1,7 +1,8 @@
 import { Link } from 'preact-router/match';
 import style from './style.css';
 import Logo from '../../logo'
-const headerWrapper = ({ headerLink, headerSocialLink, openMenu, phone }) => (
+import { phone } from '../../../vars'
+const headerWrapper = ({ headerLink, headerSocialLink, openMenu }) => (
   <header class={style.header}>
     <div class={style.headerWrapper}>
       <div class={style.headerWrapperLeft}>
