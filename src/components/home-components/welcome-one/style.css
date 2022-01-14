@@ -17,7 +17,7 @@
 }
 .welcomeOneRow > * {
   flex-shrink: 0;
-  max-width: 100%;
+  width: 100%;
   padding: 0 15px;
 }
 .welcomeOneLeft {

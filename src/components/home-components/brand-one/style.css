@@ -78,7 +78,7 @@
 .swiperSlide img {
   transition: 500ms;
   opacity: 0.15;
-  max-width: 100%;
+  width: 100%;
   vertical-align: middle;
 }
 .swiperSlide img:hover {
