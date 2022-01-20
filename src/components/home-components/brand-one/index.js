@@ -1,9 +1,8 @@
 import style from './style.css';
-import brandImg from '../../../assets/img/brand--1-2.png'
 import { useState } from 'preact/hooks';
 
 const BrandOne = () => {
-  const [brandImages, setBrandImages] = useState([
+  const [brandImages] = useState([
     { imgSrc: '../../../assets/img/brand--1-2.png', id: 1 },
     { imgSrc: '../../../assets/img/brand--1-2.png', id: 2 },
     { imgSrc: '../../../assets/img/brand--1-2.png', id: 3 },

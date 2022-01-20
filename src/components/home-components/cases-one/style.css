@@ -1,0 +1,34 @@
+.casesOne {
+  position: relative;
+  display: block;
+  background-color: #f2f4f8;
+  padding: 180px 0 90px;
+  margin-top: -60px;
+}
+.casesOneContainer {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .casesOneContainer {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .casesOneContainer {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .casesOneContainer {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .casesOneContainer {
+    max-width: 1200px;
+  }
+}

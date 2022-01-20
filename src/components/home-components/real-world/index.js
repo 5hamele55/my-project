@@ -2,7 +2,7 @@ import style from './style.css';
 import { useState, useEffect } from 'preact/hooks';
 
 const RealWorld = ({ scroll, addClassOnScroll }) => {
-  const [realItems, setRealItems] = useState([
+  const [realItems] = useState([
     { link: '#', body1: 'wealth', body2: 'Management', icon: 1, readMoreLink: '#' },
     { link: '#', body1: 'audit', body2: 'marketing', icon: 2, readMoreLink: '#' },
     { link: '#', body1: 'Finance', body2: 'consulting', icon: 3, readMoreLink: '#' }
