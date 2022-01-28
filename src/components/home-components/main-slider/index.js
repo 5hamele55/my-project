@@ -13,7 +13,6 @@ const MainSlider = () => {
       else if (index < 0) setIndex(slides.length - 1)
       else setIndex(prev => prev + 1)
       setCurSlide(slides[index])
-      console.log(curSlide);
     }, 7000);
     return () => {
       setToggleClass(true)
@@ -21,7 +20,7 @@ const MainSlider = () => {
     }
   }, [index]);
   return (
-    <section class={style.mainSlider}>
+    <section class={style.mainSlider} id="smooth">
       <div class={style.mainSwiperContainer}>
         <div class={style.mainSwiperWrapper}>
           <div class={`${style.mainSwiperSlide} ${toggleClass && style.SwiperSlideActive}`}>

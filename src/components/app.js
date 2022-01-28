@@ -55,6 +55,7 @@ const App = () => {
 			<Router>
 				<Home path="/" scroll={scroll} />
 			</Router>
+			<a href='#smooth' class="scrollTop"><span>&and;</span></a>
 		</div>
 	)
 }
