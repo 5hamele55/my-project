@@ -5,6 +5,7 @@ import BrandOne from '../../components/home-components/brand-one';
 import WelcomeOne from '../../components/home-components/welcome-one';
 import TwoBoxes from '../../components/home-components/two-boxes';
 import CasesOne from '../../components/home-components/cases-one';
+import OurMission from '../../components/home-components/our-mission';
 
 const Home = ({ scroll }) => {
 	const addClassOnScroll = (position, changeState) => {
@@ -17,7 +18,8 @@ const Home = ({ scroll }) => {
 			<BrandOne scroll={scroll} addClassOnScroll={addClassOnScroll} />
 			<WelcomeOne scroll={scroll} addClassOnScroll={addClassOnScroll} />
 			<TwoBoxes />
-			<CasesOne />
+			<CasesOne scroll={scroll} addClassOnScroll={addClassOnScroll} />
+			<OurMission />
 		</main>
 	)
 }
