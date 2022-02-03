@@ -1,0 +1,221 @@
+.welcomeOne {
+  position: relative;
+  display: block;
+  padding: 120px 0 120px;
+}
+.welcomeOneContainer {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+.welcomeOneRow {
+  width: 100%;
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.welcomeOneRow > * {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 0 15px;
+}
+.welcomeOneLeft {
+  margin-right: 0px;
+}
+.welcomeOneImgBox {
+  position: relative;
+}
+.welcomeOneImg1 {
+  background-color: #0f0d1d;
+}
+.welcomeOneImg1 img,
+.welcomeOneImg2 img {
+  width: 100%;
+  mix-blend-mode: luminosity;
+  vertical-align: middle;
+}
+.welcomeOneImg2 {
+  background-color: #0f0d1d;
+  border-top: 20px solid white;
+  border-left: 20px solid white;
+  position: absolute;
+  bottom: -60px;
+  right: -20px;
+}
+.welcomeOneRight {
+  display: block;
+}
+.welcomeOneTitle {
+  font-size: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 60px;
+  margin-bottom: 37px;
+  margin-top: -12px;
+  letter-spacing: -0.02em;
+  color: #0f0d1d;
+}
+.welcomeOneText1 {
+  margin: 0;
+  padding-bottom: 37px;
+}
+.welcomeOneText2 {
+  font-size: 26px;
+  color: #3c72fc;
+  font-weight: 400;
+  line-height: 45px;
+  margin-top: 0;
+}
+.welcomeOneProgress {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 31px;
+}
+.welcomeOneBar {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background: #f2f4f8;
+  border-radius: 30px;
+  margin-bottom: 3px;
+}
+.welcomeOneBarInner {
+  position: relative;
+  display: block;
+  width: 0px;
+  height: 20px;
+  border-radius: 30px;
+  background: #3c72fc;
+  transition: all 1500ms ease;
+}
+.welcomeOneCountText {
+  position: absolute;
+  right: 0px;
+  bottom: -28px;
+  color: #726f84;
+  line-height: 26px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0;
+  transition: all 500ms ease;
+}
+.loaded .loadedBar1 {
+  width: 88%;
+}
+.loaded .loadedBar2 {
+  width: 68%;
+}
+.loaded .welcomeOneCountText {
+  opacity: 1;
+}
+.welcomeOneProgress h4 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+  letter-spacing: -0.02em;
+  color: #0f0d1d;
+  margin: 0;
+}
+.welcomeOneCall {
+  display: flex;
+  align-items: center;
+  padding-top: 35px;
+}
+.welcomeOneCallIcon {
+  height: 68px;
+  width: 68px;
+  background-color: #ebf1ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  color: #3c72fc;
+  transition: all 500ms ease;
+}
+.welcomeOneCall:hover .welcomeOneCallIcon {
+  background-color: #3c72fc;
+  color: #ebf1ff;
+}
+.welcomeOneCallText {
+  margin-left: 30px;
+}
+.welcomeOneCallText p {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+}
+.welcomeOneCallText a {
+  font-size: 18px;
+  color: #0f0d1d;
+  transition: all 500ms ease;
+  text-decoration: none;
+}
+.welcomeOneCallText a:hover {
+  color: #3c72fc;
+}
+@media (max-width: 767px) {
+  .welcomeOneImg2 {
+    display: none;
+  }
+  .welcomeOneTitle {
+    font-size: 34px;
+    line-height: 44px;
+    margin-top: 0;
+  }
+  .welcomeOneCallText {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+@media (min-width: 576px) {
+  .welcomeOneContainer {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .welcomeOneContainer {
+    max-width: 720px;
+  }
+  .welcomeOneImg2 {
+    right: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .welcomeOneRight {
+    margin-top: 50px;
+  }
+  .welcomeOneCall {
+    align-items: inherit;
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .welcomeOneRight {
+    margin-top: 110px;
+  }
+}
+@media (min-width: 992px) {
+  .welcomeOneContainer {
+    max-width: 960px;
+  }
+  .welcomeOneCol {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .welcomeOneContainer {
+    max-width: 1200px;
+  }
+  .welcomeOneLeft {
+    margin-right: 60px;
+  }
+  .welcomeOneImg2 {
+    right: -20px;
+  }
+}

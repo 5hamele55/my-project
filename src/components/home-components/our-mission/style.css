@@ -1,0 +1,129 @@
+.ourMission {
+  position: relative;
+  padding: 109px 0 120px;
+  background-color: #0f0d1d;
+}
+.paralax {
+  background-image: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #0f0d1d;
+  background-blend-mode: luminosity;
+  opacity: 0.5;
+}
+.paralaxContainer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  clip: rect(0, 100vw, 500px, 0);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  z-index: -100;
+}
+.paralaxInner {
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../../../assets/img/our-mission-bg.jpg");
+  position: fixed;
+  pointer-events: none;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  transform: translateY(-7.6075px);
+  filter: grayscale(100%);
+}
+.ourMissionContainer {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.ourMissionRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.ourMissionRow > * {
+  flex: 0 0 auto;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.ourMissionInner {
+  position: relative;
+  text-align: center;
+}
+.ourMissionInner h2 {
+  font-size: 60px;
+  color: white;
+  font-weight: 900;
+  line-height: 70px;
+  text-transform: uppercase;
+  margin-bottom: 46px;
+  letter-spacing: -0.02em;
+}
+.ourMissionInner a {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  outline: none;
+  background-color: #3c72fc;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 18px 50px;
+  transition: 500ms;
+  letter-spacing: 0.1em;
+}
+.ourMissionInner a:hover {
+  background-color: white;
+  color: #3c72fc;
+}
+@media (min-width: 576px) {
+  .ourMissionContainer {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .ourMissionContainer {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .ourMissionContainer {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .ourMissionContainer {
+    max-width: 1200px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .ourMissionInner h2 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ourMissionInner h2 {
+    font-size: 53px;
+    line-height: 63px;
+  }
+}

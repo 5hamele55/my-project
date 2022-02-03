@@ -1,5 +1,5 @@
 import style from './style.css';
-import HeaderWrapper from '../header-container';
+import HeaderWrapper from '../header-wrapper';
 import { useState, useEffect } from 'preact/hooks';
 
 const StrickyHeader = ({ headerLink, headerSocialLink }) => {

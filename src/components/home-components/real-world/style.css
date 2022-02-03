@@ -1,0 +1,193 @@
+.realWorld {
+  position: relative;
+  display: block;
+  background-color: #0f0d1d;
+  padding: 120px 0 90px;
+}
+.realWorldShape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 610px;
+  height: 595px;
+  opacity: 0.08;
+  background-image: url("../../../assets/img/real-world-shape.png");
+  visibility: hidden;
+  transition: all 2500ms ease;
+  visibility: hidden;
+  transform: translateX(-100%);
+}
+.realWorldShapeSlideIn {
+  transform: translateX(0);
+  visibility: visible;
+}
+.realWorldContainer {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.realWorldTitle {
+  margin-top: -12px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.realWorldTitle h2 {
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 60px;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+.realWorldTitle span {
+  color: #8f8da0;
+  font-size: 18px;
+  line-height: 30px;
+}
+.realWorldRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.realWorldRow > * {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.realWorldCol {
+  width: 100%;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 1500ms;
+}
+.realWorldCol:nth-child(1) {
+  transition-delay: 0ms;
+}
+.realWorldCol:nth-child(2) {
+  transition-delay: 300ms;
+}
+.realWorldCol:nth-child(3) {
+  transition-delay: 600ms;
+}
+.fadeIn {
+  transform: translateY(0);
+  opacity: 1;
+}
+.realWorldColInner {
+  position: relative;
+  display: block;
+  background-color: #06050c;
+  padding: 54px 60px 75px;
+  margin-bottom: 30px;
+  transition: background-color 500ms ease;
+}
+.realWorldColInner:hover {
+  background-color: #3c72fc;
+}
+.realWorldColInner h2 {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 29px;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+.realWorldColInner h2 a {
+  color: inherit;
+  transition: all 500ms ease;
+  text-decoration: none;
+  background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px
+    87% / 0px 2px no-repeat;
+}
+.realWorldColInner h2 a:hover {
+  background-size: 100% 2px;
+  color: white;
+}
+.realWorldLink {
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  color: #8f8da0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 500ms ease;
+  text-decoration: none;
+}
+.realWorldLink:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  height: 2px;
+  width: 10px;
+  background-color: currentColor;
+  transition: width 500ms ease;
+}
+.realWorldLink:hover::before {
+  width: 100%;
+}
+.realWorldColInner:hover .realWorldLink {
+  color: white;
+}
+.realWorldColIcon {
+  position: absolute;
+  bottom: 52px;
+  right: 60px;
+}
+.realWorldColIcon span {
+  font-size: 65px;
+  color: #3c72fc;
+  line-height: 65px;
+  transform: scale(1);
+  transform-origin: center center;
+  transition: transform 500ms ease, color 500ms ease;
+  display: block;
+}
+.realWorldColInner:hover .realWorldColIcon span {
+  color: white;
+  transform: scale(0.8);
+}
+@media (min-width: 576px) {
+  .realWorldContainer {
+    max-width: 540px;
+  }
+}
+@media (max-width: 767px) {
+  .realWorldTitle h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .realWorldColInner {
+    padding: 54px 30px 75px;
+  }
+  .realWorldShape {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .realWorldContainer {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .realWorldContainer {
+    max-width: 960px;
+  }
+  .realWorldCol {
+    flex: 0 0 auto;
+    width: 33.3%;
+  }
+}
+@media (min-width: 1200px) {
+  .realWorldContainer {
+    max-width: 1200px;
+  }
+}
