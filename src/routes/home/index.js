@@ -7,6 +7,8 @@ import TwoBoxes from '../../components/home-components/two-boxes';
 import CasesOne from '../../components/home-components/cases-one';
 import OurMission from '../../components/home-components/our-mission';
 import Faq from '../../components/home-components/faq';
+import Talking from '../../components/home-components/talking';
+import Counters from '../../components/home-components/counters';
 
 const Home = ({ scroll }) => {
 	const addClassOnScroll = (position, changeState) => {
@@ -22,6 +24,8 @@ const Home = ({ scroll }) => {
 			<CasesOne scroll={scroll} addClassOnScroll={addClassOnScroll} />
 			<OurMission />
 			<Faq />
+			<Talking />
+			<Counters />
 		</main>
 	)
 }
