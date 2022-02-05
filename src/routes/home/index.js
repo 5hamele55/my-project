@@ -25,7 +25,7 @@ const Home = ({ scroll }) => {
 			<OurMission />
 			<Faq />
 			<Talking />
-			<Counters />
+			<Counters scroll={scroll} addClassOnScroll={addClassOnScroll} />
 		</main>
 	)
 }
