@@ -10,6 +10,7 @@ import Faq from '../../components/home-components/faq';
 import Talking from '../../components/home-components/talking';
 import Counters from '../../components/home-components/counters';
 import Financial from '../../components/home-components/financial';
+import News from '../../components/home-components/news';
 
 const Home = ({ scroll }) => {
 	const addClassOnScroll = (position, changeState) => {
@@ -28,6 +29,7 @@ const Home = ({ scroll }) => {
 			<Talking />
 			<Counters scroll={scroll} addClassOnScroll={addClassOnScroll} />
 			<Financial />
+			<News scroll={scroll} addClassOnScroll={addClassOnScroll} />
 		</main>
 	)
 }
