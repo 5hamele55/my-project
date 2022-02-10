@@ -9,6 +9,7 @@ import OurMission from '../../components/home-components/our-mission';
 import Faq from '../../components/home-components/faq';
 import Talking from '../../components/home-components/talking';
 import Counters from '../../components/home-components/counters';
+import Financial from '../../components/home-components/financial';
 
 const Home = ({ scroll }) => {
 	const addClassOnScroll = (position, changeState) => {
@@ -26,6 +27,7 @@ const Home = ({ scroll }) => {
 			<Faq />
 			<Talking />
 			<Counters scroll={scroll} addClassOnScroll={addClassOnScroll} />
+			<Financial />
 		</main>
 	)
 }

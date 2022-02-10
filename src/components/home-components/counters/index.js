@@ -12,7 +12,6 @@ const Counters = ({ scroll, addClassOnScroll }) => {
 
   useEffect(() => {
     addClassOnScroll(5100, setCounter)
-    console.log(scroll)
   }, [scroll])
   return (
     <section class={style.counters}>
