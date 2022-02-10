@@ -38,3 +38,89 @@ body {
 .scrollTop:hover {
   background-color: #0f0d1d;
 }
+/* counters section counter start */
+/* icon1 */
+@property --num1 {
+  syntax: "<integer>";
+  initial-value: 420;
+  inherits: false;
+}
+.count1 {
+  animation: counter1 2s linear;
+  counter-reset: num1 var(--num1);
+}
+.count1::after {
+  content: counter(num1);
+}
+@keyframes counter1 {
+  from {
+    --num1: 0;
+  }
+  to {
+    --num1: 420;
+  }
+}
+/* icon2 */
+@property --num2 {
+  syntax: "<integer>";
+  initial-value: 880;
+  inherits: false;
+}
+.count2 {
+  animation: counter2 2s linear;
+  counter-reset: num2 var(--num2);
+}
+.count2::after {
+  content: counter(num2);
+}
+@keyframes counter2 {
+  from {
+    --num2: 0;
+  }
+  to {
+    --num2: 880;
+  }
+}
+/* icon3 */
+@property --num3 {
+  syntax: "<integer>";
+  initial-value: 990;
+  inherits: false;
+}
+.count3 {
+  animation: counter3 2s linear;
+  counter-reset: num3 var(--num3);
+}
+.count3::after {
+  content: counter(num3);
+}
+@keyframes counter3 {
+  from {
+    --num3: 0;
+  }
+  to {
+    --num3: 990;
+  }
+}
+/* icon4 */
+@property --num4 {
+  syntax: "<integer>";
+  initial-value: 160;
+  inherits: false;
+}
+.count4 {
+  animation: counter4 2s linear;
+  counter-reset: num4 var(--num4);
+}
+.count4::after {
+  content: counter(num4);
+}
+@keyframes counter4 {
+  from {
+    --num4: 0;
+  }
+  to {
+    --num4: 160;
+  }
+}
+/* counters section counter start */
