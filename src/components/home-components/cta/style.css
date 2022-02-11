@@ -1,0 +1,120 @@
+.cta {
+  position: relative;
+  display: block;
+  background-color: #3c72fc;
+  padding: 110px 0;
+}
+.ctaBg {
+  background-image: url("../../../assets/img/cta-one-bg.png");
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-position: center center;
+  background-size: cover;
+  background-color: #3c72fc;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+.ctaContainer {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.ctaCol {
+  flex: 0 0 auto;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.ctaInner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ctaLeft h2 {
+  font-size: 40px;
+  color: white;
+  line-height: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+.ctaRight a {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 18px 50px;
+  transition: 500ms;
+  letter-spacing: 0.1em;
+  background-color: white;
+  color: #0f0d1d;
+  text-decoration: none;
+}
+.ctaRight a:hover {
+  background-color: #0f0d1d;
+  color: white;
+}
+@media only screen and (max-width: 767px) {
+  .ctaInner {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .ctaLeft h2 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .ctaRight {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 576px) {
+  .ctaContainer {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .ctaContainer {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .ctaContainer {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .ctaContainer {
+    max-width: 1200px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ctaInner {
+    flex-direction: column;
+  }
+  .ctaLeft h2 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .ctaRight {
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,231 @@
+.faq {
+  padding: 120px 0 120px;
+}
+.faqContainer {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.faqTitle {
+  margin-top: -12px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.faqTitle h2 {
+  margin: 0;
+  font-weight: 900;
+  color: #0f0d1d;
+  font-size: 50px;
+  line-height: 60px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+.faqTitle p {
+  display: inline-block;
+  color: #726f84;
+  font-size: 18px;
+  align-items: center;
+  line-height: 30px;
+}
+.faqRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.faqRow > * {
+  flex: 0 0 auto;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.faqImg {
+  background-color: #0f0d1d;
+}
+.faqImg > img {
+  width: 100%;
+  mix-blend-mode: luminosity;
+  vertical-align: middle;
+}
+.faqBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 42px;
+}
+.faqListBox ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.icon span {
+  font-size: 20px;
+  color: #3c72fc;
+  display: block;
+  transform: scale(1);
+  transform-origin: right center;
+  transition: transform 500ms ease;
+}
+.faqListBox ul li:hover .icon span {
+  transform: scale(0.75);
+}
+.text {
+  margin-left: 20px;
+}
+.text p {
+  font-weight: 400;
+}
+.faqExpeiranceBox {
+  display: block;
+  background-color: #3c72fc;
+  text-align: center;
+  max-width: 200px;
+  width: 100%;
+  padding: 28px 0 38px;
+}
+.faqExpeiranceBox h2 {
+  font-size: 60px;
+  color: white;
+  line-height: 70px;
+  font-weight: 900;
+}
+.faqExpeiranceBox p {
+  margin: 0;
+  color: white;
+  line-height: 25px;
+}
+.faqAccordionGroup {
+  position: relative;
+  display: block;
+  counter-reset: count;
+}
+.faqAccordion {
+  position: relative;
+  border: 1px solid transparent;
+  transition: all 500ms ease;
+  margin-top: 10px;
+}
+.faqAccordion:first-child {
+  margin-top: 0px;
+}
+.faqAccordionTitle {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 22px 0px 22px;
+  padding-top: 23.5px;
+  padding-bottom: 23.5px;
+  padding-left: 40px;
+  padding-right: 30px;
+  transition: all 200ms linear;
+  transition-delay: 0.1s;
+  background-color: #f2f4f8;
+}
+.faqAccordionTitle h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 28px;
+  color: #0f0d1d;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: -0.02em;
+  transition: all 500ms ease;
+}
+.faqAccordionTitle h4::before {
+  content: "\002B";
+  font-weight: 900;
+  font-size: 12px;
+  color: #3c72fc;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%);
+  transition: all 500ms ease;
+}
+.faqAccordionTitle h4 span {
+  position: relative;
+  display: inline-block;
+  color: #3c72fc;
+}
+.faqAccordionTitle h4 span::before {
+  counter-increment: count;
+  content: counter(count);
+}
+.faqAccordionContent {
+  position: relative;
+  padding: 0px 40px 28px;
+  border-bottom: 0px solid #e5e5e5;
+  display: none;
+}
+.faqAccInner p {
+  margin: 0;
+  font-size: 16px;
+}
+.active {
+  border: 1px solid #e6e9ef;
+  background-color: white;
+  box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 5%);
+}
+.active .faqAccordionTitle {
+  background-color: transparent;
+}
+.active .faqAccordionTitle h4::before {
+  content: "\2212";
+  color: #0f0d1d;
+}
+.active .faqAccordionContent {
+  display: block;
+}
+@media (min-width: 576px) {
+  .faqContainer {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .faqContainer {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .faqContainer {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .faqContainer {
+    max-width: 1200px;
+  }
+  .faqRow > * {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .faqTitle h2 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .faqBottom {
+    align-items: inherit;
+    flex-direction: column;
+  }
+  .faqExpeiranceBox {
+    margin-top: 25px;
+  }
+}
+@media (max-width: 1199px) {
+  .faqRight {
+    margin-top: 50px;
+  }
+}
