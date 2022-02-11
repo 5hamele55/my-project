@@ -3,6 +3,7 @@ import { useState, useEffect } from 'preact/hooks';
 import Header from './header-components/header';
 import StrickyHeader from './header-components/stricky-header';
 import PhoneMenu from './header-components/phone-menu';
+import Footer from './footer';
 
 // Code-splitting is automated for `routes` directory
 import Home from '../routes/home';
@@ -47,14 +48,18 @@ const App = () => {
 		})
 		setHeaderLink(arr)
 	}
+	const addClassOnScroll = (position, changeState) => {
+		if (scroll > position) changeState(true)
+	}
 	return (
 		<div id="app">
 			<Header headerLink={headerLink} headerSocialLink={headerSocialLink} openMenu={openMenu} />
 			<StrickyHeader headerLink={headerLink} headerSocialLink={headerSocialLink} />
 			<PhoneMenu menuBtn={menuBtn} closeMenu={closeMenu} headerLink={headerLink} expandLink={expandLink} headerSocialLink={headerSocialLink} />
 			<Router>
-				<Home path="/" scroll={scroll} />
+				<Home path="/" scroll={scroll} addClassOnScroll={addClassOnScroll} />
 			</Router>
+			<Footer scroll={scroll} addClassOnScroll={addClassOnScroll} headerSocialLink={headerSocialLink} />
 			<a href='#smooth' class="scrollTop"><span>&and;</span></a>
 		</div>
 	)

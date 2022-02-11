@@ -13,10 +13,8 @@ import Financial from '../../components/home-components/financial';
 import News from '../../components/home-components/news';
 import Cta from '../../components/home-components/cta';
 
-const Home = ({ scroll }) => {
-	const addClassOnScroll = (position, changeState) => {
-		if (scroll > position) changeState(true)
-	}
+const Home = ({ scroll, addClassOnScroll }) => {
+
 	return (
 		<main class={style.home}>
 			<MainSlider />
