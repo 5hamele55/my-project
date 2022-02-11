@@ -11,6 +11,7 @@ import Talking from '../../components/home-components/talking';
 import Counters from '../../components/home-components/counters';
 import Financial from '../../components/home-components/financial';
 import News from '../../components/home-components/news';
+import Cta from '../../components/home-components/cta';
 
 const Home = ({ scroll }) => {
 	const addClassOnScroll = (position, changeState) => {
@@ -30,6 +31,7 @@ const Home = ({ scroll }) => {
 			<Counters scroll={scroll} addClassOnScroll={addClassOnScroll} />
 			<Financial />
 			<News scroll={scroll} addClassOnScroll={addClassOnScroll} />
+			<Cta />
 		</main>
 	)
 }
