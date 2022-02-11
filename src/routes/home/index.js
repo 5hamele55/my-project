@@ -6,6 +6,12 @@ import WelcomeOne from '../../components/home-components/welcome-one';
 import TwoBoxes from '../../components/home-components/two-boxes';
 import CasesOne from '../../components/home-components/cases-one';
 import OurMission from '../../components/home-components/our-mission';
+import Faq from '../../components/home-components/faq';
+import Talking from '../../components/home-components/talking';
+import Counters from '../../components/home-components/counters';
+import Financial from '../../components/home-components/financial';
+import News from '../../components/home-components/news';
+import Cta from '../../components/home-components/cta';
 
 const Home = ({ scroll }) => {
 	const addClassOnScroll = (position, changeState) => {
@@ -20,6 +26,12 @@ const Home = ({ scroll }) => {
 			<TwoBoxes />
 			<CasesOne scroll={scroll} addClassOnScroll={addClassOnScroll} />
 			<OurMission />
+			<Faq />
+			<Talking />
+			<Counters scroll={scroll} addClassOnScroll={addClassOnScroll} />
+			<Financial />
+			<News scroll={scroll} addClassOnScroll={addClassOnScroll} />
+			<Cta />
 		</main>
 	)
 }

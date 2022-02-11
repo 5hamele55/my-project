@@ -1,0 +1,270 @@
+.financial {
+  position: relative;
+  display: block;
+  padding: 0 0 104px;
+  margin-top: -95px;
+}
+.financialContainer {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.financialRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.financialRow > * {
+  flex-shrink: 0;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.tabBtns {
+  z-index: 1;
+  display: block;
+  list-style: none;
+  overflow: auto;
+}
+.tabBtns li {
+  float: left;
+  max-width: 390px;
+  width: 100%;
+  text-align: center;
+}
+.tabBtns li span {
+  display: block;
+  background-color: rgb(242, 244, 248);
+  box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 5%);
+  margin: 0;
+  padding: 40.5px 0px;
+  color: #0f0d1d;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: all 500ms ease;
+  cursor: pointer;
+  letter-spacing: -0.02em;
+}
+.tabBtns li:hover span {
+  color: #3c72fc;
+  background-color: white;
+  box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 5%);
+}
+.tabBtns .active span {
+  color: #3c72fc;
+  background-color: white;
+  box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 5%);
+}
+.financialContent {
+  padding: 0;
+}
+.financialTab {
+  padding: 0px;
+  /* display: none; */
+  display: block;
+}
+.financialTabContent {
+  display: block;
+  padding-top: 100px;
+}
+.financialTabRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.financialTabRow > * {
+  flex-shrink: 0;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.financialTabSingle1 ul {
+  margin-top: -5px;
+  padding-left: 0;
+  list-style: none;
+}
+.financialTabSingle1 ul li {
+  position: relative;
+  display: block;
+  padding-left: 90px;
+}
+.financialTabSingle1Icon {
+  height: 60px;
+  width: 60px;
+  background-color: #ebf1ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  transition: all 500ms ease;
+  color: #3c72fc;
+}
+.financialTabSingle1Icon span {
+  font-size: 32px;
+  transform: scale(1);
+  display: block;
+  transition: transform 500ms ease;
+}
+.financialTabSingle1 ul li:hover .financialTabSingle1Icon {
+  background-color: #3c72fc;
+  color: white;
+}
+.financialTabSingle1 ul li:hover .financialTabSingle1Icon span {
+  transform: scale(0.85);
+}
+.financialTabSingle1 ul li:last-child {
+  margin-top: 43px;
+}
+.financialTabSingle1Content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #0f0d1d;
+}
+.financialTabSingle1Content p {
+  font-size: 16px;
+  margin: 0;
+}
+.financialTabSingle2 {
+  position: relative;
+  display: block;
+  padding-left: 90px;
+  margin-right: -8px;
+  margin-top: -9px;
+}
+.financialTabSingle2 p {
+  font-size: 16px;
+  margin: 0;
+}
+.financialTabSingle2 ul {
+  padding-top: 35px;
+  padding-left: 0;
+  list-style: none;
+}
+.financialTabSingle2 ul li {
+  position: relative;
+  font-size: 16px;
+  padding-left: 25px;
+}
+.financialTabSingle2 ul li::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 1px;
+  width: 10px;
+  content: "";
+  background-color: #3c72fc;
+  transform: translateY(-50%);
+  transition: all 500ms ease;
+}
+.financialTabSingle2 ul li:hover:before {
+  left: 7px;
+  width: 13px;
+}
+.financialTabSingle3 {
+  position: relative;
+  display: block;
+  margin-left: 30px;
+}
+.financialTabSingle3Img {
+  background-color: #0f0d1d;
+}
+.financialTabSingle3Img img {
+  width: 100%;
+  mix-blend-mode: luminosity;
+  vertical-align: middle;
+}
+@media only screen and (max-width: 767px) {
+  .tabBtns {
+    text-align: center;
+  }
+  .tabBtns li {
+    float: none;
+  }
+  .financialTabSingle2 {
+    padding-left: 0;
+    margin-right: 0;
+    margin-top: 37px;
+    margin-bottom: 43px;
+  }
+}
+@media (min-width: 576px) {
+  .financialContainer {
+    max-width: 540px;
+  }
+  .financialTabRow {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .financialContainer {
+    max-width: 720px;
+  }
+  .financialTabRow {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .financialContainer {
+    max-width: 960px;
+  }
+  .financialTabRow {
+    max-width: 960px;
+  }
+  .financialTabCol {
+    flex: 0 0 auto;
+    width: 33.3%;
+  }
+}
+@media (min-width: 1200px) {
+  .financialContainer {
+    max-width: 1200px;
+  }
+  .financialTabRow {
+    max-width: 1200px;
+  }
+  .financialCol {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .financialTabSingle2::before {
+    position: absolute;
+    top: 11px;
+    bottom: 4px;
+    left: 30px;
+    content: "";
+    background-color: #e6e9ef;
+    width: 1px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .tabBtns li {
+    max-width: 230px;
+  }
+  .financialTabSingle2 {
+    padding-left: 0;
+    margin-right: 0;
+    margin-top: 37px;
+    margin-bottom: 43px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .tabBtns li {
+    max-width: 310px;
+  }
+  .financialTabSingle2 {
+    padding-left: 0;
+    margin-right: 0px;
+  }
+}

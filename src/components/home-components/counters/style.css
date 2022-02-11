@@ -1,0 +1,136 @@
+.counters {
+  position: relative;
+  display: block;
+  background-color: #0f0d1d;
+}
+.countersBg {
+  background-image: url("../../../assets/img/counter-one-bg.jpg");
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.02;
+}
+.countersContainer {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.countersBox {
+  position: relative;
+  display: block;
+  padding: 120px 0 204px;
+  list-style: none;
+}
+.countersSingle {
+  position: relative;
+  display: inline-block;
+  max-width: 284px;
+  width: 100%;
+  text-align: center;
+}
+.countersSingle:first-child::before {
+  display: none;
+}
+.countersSingle::before {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  bottom: 9px;
+  content: "";
+  width: 1px;
+  background-color: rgb(255, 255, 255, 0.1);
+}
+.countersIcon {
+  position: relative;
+  display: flex;
+  height: 110px;
+  width: 110px;
+  margin: 0 auto;
+  background-color: #06050c;
+  align-items: center;
+  justify-content: center;
+}
+.countersIcon span {
+  font-size: 65px;
+  color: #3c72fc;
+  line-height: 65px;
+  display: block;
+  transform: scale(1);
+  transition: all 500ms ease;
+}
+.countersSingle:hover .countersIcon span {
+  transform: scale(0.85);
+}
+.countersSingle h3 {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  line-height: 1.1em;
+  font-size: 40px;
+  color: white;
+  font-weight: 900;
+  line-height: 50px;
+  margin-bottom: 4px;
+  margin-top: 25px;
+  letter-spacing: -0.02em;
+}
+.countersSingle p {
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.1em;
+}
+@media only screen and (max-width: 767px) {
+  .countersBox {
+    text-align: center;
+  }
+  .countersSingle {
+    margin-bottom: 30px;
+  }
+  .countersSingle::before {
+    display: none;
+  }
+}
+@media (min-width: 576px) {
+  .countersContainer {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .countersContainer {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .countersContainer {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .countersContainer {
+    max-width: 1200px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .countersSingle {
+    max-width: 342px;
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .countersSingle {
+    max-width: 462px;
+    margin-bottom: 30px;
+  }
+  .countersSingle:nth-child(3)::before {
+    display: none;
+  }
+}
